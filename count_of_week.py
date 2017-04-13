@@ -13,7 +13,7 @@ def count_of_week(base_km, wish_km):
 	while base_km < wish_km:
 		base_km = base_km * 1.1
 		week += 1
-		print("week ", week, "; km ", round(base_km, 2))
+		print("On week", week, "you can run", round(base_km, 2), "km;")
 
 	
 
