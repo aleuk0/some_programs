@@ -1,5 +1,3 @@
-__author__ = 'Alex'
-
 def NOD():
     a = int(input("Type first: "))
     b = int(input("Type second: "))
