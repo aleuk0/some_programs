@@ -7,7 +7,7 @@ me = User.objects.get(username='admin')
 from django.utils import timezone
 
 def script(number_of_sonnets, first_sonnet):
-    for i in range(num_of_sonn):
+    for i in range(number_of_sonnets):
 	    URL = 'http://www.shakespeares-sonnets.com/sonnet/'
         page = requests.get(URL + str(i+first_sonnet))
         tree = html.fromstring(page.content)
