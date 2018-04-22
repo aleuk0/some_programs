@@ -15,14 +15,9 @@ def cf():
     while True:
         number_of_rand_film = random.randint(0, len(list_of_films) - 1)
         # print(number_of_rand_film, len(list_of_films)-1)
-        print(list_of_films[number_of_rand_film])
-        if (list_of_films[number_of_rand_film] != " " and not list_of_films[number_of_rand_film].endswith("+++")): break
-        print()
-
-    # записываем этот фильм во второй файл
-    # second_file = open("films_s.txt", "a")
-    # second_file.write(str(list_of_films[number_of_rand_film]) + "\n")
-    # second_file.close()
+        if (list_of_films[number_of_rand_film] != " " and not list_of_films[number_of_rand_film].endswith("+++")): 
+            print(list_of_films[number_of_rand_film] + "\n")
+            break
 
     # удаляем выбраный фильм из основного списка
     first_file = open("films.txt", "w")
@@ -36,5 +31,6 @@ def cf():
         first_file.write(str(film) + "\n")
     first_file.close()
 
-cf()
-input()
+while(True):
+    cf()
+    if not input("to chouse another film press 'y' \n") == "y": break
